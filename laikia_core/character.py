@@ -5,3 +5,9 @@ class character:
         self.water_skill = water_skill
         self.oxygen_skill = oxygen_skill
         self.com_skill = com_skill
+        self.inventory = []
+        
+    def add_item(self, item):
+        self.inventory.append(item)
+        
+    

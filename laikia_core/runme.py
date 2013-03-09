@@ -1,6 +1,7 @@
 from ship import ship
 from event import event
 from character import character
+from item import item
 
 laika = ship("Laika", 100.0, 100.0, 100.0)
 
@@ -32,6 +33,12 @@ laika.print_status()
 # Loop to create characters
 
 # Setup Loop
+
+gun = item("gun", "When used, a gun prevents the owner from being voted into the reactor")
+
+character_a.add_item(gun)#give character "a" a gun
+print character_a.inventory[0].name
+print character_b.inventory
 
 # Game Loop
 
