@@ -18,18 +18,8 @@ def main():
     character_d = character("Robertson", 100.0, 2.0, 1.0, .4)
     character_e = character("Ted", 100.0, 2.0, 1.0, .4)
     
+
     
-    print event_solar_flare.name
-    print event_solar_flare.description
-    print event_solar_flare.com_system_health_change
-    print event_solar_flare.water_system_health_change
-    print event_solar_flare.oxygen_garden_health_change
-    
-    laika.print_status()
-    laika.apply_event(event_solar_flare)
-    laika.print_status()
-    laika.apply_event(event_oxygen_fire)
-    laika.print_status()
     
     
     # Loop to create characters
@@ -39,8 +29,6 @@ def main():
     gun = item("gun", "When used, a gun prevents the owner from being voted into the reactor")
     
     character_a.add_item(gun)#give character "a" a gun
-    print character_a.inventory[0].name
-    print character_b.inventory
     
     # Game Loop
     
