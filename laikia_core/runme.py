@@ -3,10 +3,12 @@ from event import event
 from character import character
 from item import item
 
+
 def main():
     #Build ship
     laika = ship("Laika", 100.0, 100.0, 100.0)
-    
+    characters = []
+        
     event_solar_flare = event("Solar Flare", "Solar Flare hit, damaging com system", -10, 0, 0)
     event_oxygen_fire = event("Fire in oxygen garden", "Oh god, fire in the oxygen garden.", 0, -3.0, -20.9)
     
@@ -18,29 +20,27 @@ def main():
     character_d = character("Robertson", 100.0, 2.0, 1.0, .4)
     character_e = character("Ted", 100.0, 2.0, 1.0, .4)
     
+
     
-    print event_solar_flare.name
-    print event_solar_flare.description
-    print event_solar_flare.com_system_health_change
-    print event_solar_flare.water_system_health_change
-    print event_solar_flare.oxygen_garden_health_change
-    
-    laika.print_status()
-    laika.apply_event(event_solar_flare)
-    laika.print_status()
-    laika.apply_event(event_oxygen_fire)
-    laika.print_status()
     
     
     # Loop to create characters
+    num_players_str = raw_input("How many players: ")
+    num_players = int(num_players_str)
+
+
     
+    for _ in xrange(num_players):
+        #TODO add choice of character abilities
+        name = raw_input()
+        character_a = character(name, 100.0, 2.0, 1.0, .1) #100 health 2 water, 1 oxygen, .1 com
+        characters.append(character_a)
+
     # Setup Loop
     
     gun = item("gun", "When used, a gun prevents the owner from being voted into the reactor")
     
     character_a.add_item(gun)#give character "a" a gun
-    print character_a.inventory[0].name
-    print character_b.inventory
     
     # Game Loop
     
