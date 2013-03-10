@@ -35,10 +35,8 @@ def main():
         name = raw_input("Name: ")
         character_a = character(name, 100.0, 2.0, 1.0, .1) #100 health 2 water, 1 oxygen, .1 com
         character_list.append(character_a)
-    
-
-    # Setup Loop
-    
+   
+   
     gun = item("gun", "When used, a gun prevents the owner from being voted into the reactor")
     
     character_a.add_item(gun)#give character "a" a gun
