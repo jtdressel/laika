@@ -10,3 +10,6 @@ class event:
         self.com_system_health_change = com
         self.water_system_health_change = water
         self.oxygen_garden_health_change = oxygen
+        
+    def __repr__(self):
+        return self.name + ":\n " + self.description
