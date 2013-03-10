@@ -1,5 +1,3 @@
-from event import event
-
 class ship:
     def __init__(self, name, com, water, oxygen):
         self.name = name
