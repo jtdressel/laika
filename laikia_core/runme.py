@@ -7,7 +7,7 @@ from item import item
 def main():
     #Build ship
     laika = ship("Laika", 100.0, 100.0, 100.0)
-    characters = []
+    character_list = []
         
     event_solar_flare = event("Solar Flare", "Solar Flare hit, damaging com system", -10, 0, 0)
     event_oxygen_fire = event("Fire in oxygen garden", "Oh god, fire in the oxygen garden.", 0, -3.0, -20.9)
@@ -32,9 +32,10 @@ def main():
     
     for _ in xrange(num_players):
         #TODO add choice of character abilities
-        name = raw_input()
+        name = raw_input("Name: ")
         character_a = character(name, 100.0, 2.0, 1.0, .1) #100 health 2 water, 1 oxygen, .1 com
-        characters.append(character_a)
+        character_list.append(character_a)
+    
 
     # Setup Loop
     
