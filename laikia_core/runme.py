@@ -2,7 +2,7 @@ from ship import ship
 from event import event
 from character import character
 from item import item
-
+import random
 
 def main():
     #Build ship
@@ -36,7 +36,11 @@ def main():
         character_list.append(character_a)
     
     # Game Loop
-    
+    for _ in xrange(10): #currently run for 10 turns
+        current_event = random.choice(event_list)
+        print current_event
+        laika.apply_event(current_event)
+        pass
 
 if __name__ == '__main__':
     main()
