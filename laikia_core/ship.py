@@ -10,6 +10,11 @@ class ship:
         self.water_system_health = self.water_system_health + event.water_system_health_change
         self.oxygen_garden_health = self.oxygen_garden_health + event.oxygen_garden_health_change
         
+    def is_alive(self):
+        if(self.water_system_health > 0 and self.oxygen_garden_health > 0):
+            return True
+        return False
+        
     def __repr__(self):
         return self.name + \
             ":\n\t Water System: " + repr(self.water_system_health) +  \
