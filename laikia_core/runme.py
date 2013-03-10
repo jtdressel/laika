@@ -8,12 +8,22 @@ def main():
     #Build ship
     laika = ship("Laika", 100.0, 100.0, 100.0)
     character_list = []
-        
-    event_solar_flare = event("Solar Flare", "Solar Flare hit, damaging com system", -10, 0, 0)
-    event_oxygen_fire = event("Fire in oxygen garden", "Oh god, fire in the oxygen garden.", 0, -3.0, -20.9)
+    event_list = []
+    item_list = []
     
-    gun = item("gun", "When used, a gun prevents the owner from being voted into the reactor")
+    #TODO load these from a file
+    event_list.append(event("Solar Flare", \
+                            "Solar Flare hit, damaging com system", \
+                            -10, \
+                            0, \
+                            0))
+    event_list.append(event("Fire in oxygen garden", \
+                            "Oh god, fire in the oxygen garden.", \
+                            0, \
+                            -3.0, \
+                            -20.9))
     
+    item_list.append(item("gun", "When used, a gun prevents the owner from being voted into the reactor"))
     
     
     # Loop to create characters
