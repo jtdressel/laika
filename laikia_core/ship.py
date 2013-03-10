@@ -12,5 +12,8 @@ class ship:
         self.water_system_health = self.water_system_health + event.water_system_health_change
         self.oxygen_garden_health = self.oxygen_garden_health + event.oxygen_garden_health_change
         
-    def print_status(self):
-        print self.name + " Water System: " + repr(self.water_system_health) + " Communications System: " + repr(self.com_system_health)
+    def __repr__(self):
+        return self.name + \
+            ":\n\t Water System: " + repr(self.water_system_health) +  \
+            "\n\t Oxygen Garden: " + repr(self.oxygen_garden_health) +  \
+            "\n\t Communications System: " + repr(self.com_system_health)
