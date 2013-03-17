@@ -4,6 +4,35 @@ from character import character
 from item import item
 import random
 
+
+def perform_vote(character_list):
+    print "Reactor needs maintenance."
+    
+    votes = dict()
+    for x in character_list:#everyone starts with zero votes
+        votes[x] = 0
+    
+    count = 0
+    for x in character_list: # print list of crew
+        print str(count) + ": " + x.name
+        count = count + 1
+    
+    for x in character_list: # do voting
+        print x.name + "'s Turn"
+        i = raw_input("Enter the number of your vote: ")
+        i = int(i)
+        votes[character_list[i]] = votes[character_list[i]] + 1
+    victim = max(votes, key=votes.get)
+    print victim.name + " was voted into the reactor."
+    victim.into_the_reactor()# this code is currently buggy
+    if (victim.alive):
+        pass
+    else:
+        print victim.name + " has died from radiation."
+        character_list.remove(victim)
+        
+    return character_list
+
 def main():
     #Build ship
     laika = ship("Laika", 100.0, 100.0, 100.0)
@@ -36,11 +65,26 @@ def main():
         character_list.append(character_a)
     
     # Game Loop
-    for _ in xrange(10): #currently run for 10 turns
+    for _ in xrange(20): #currently run for 10 turns
         current_event = random.choice(event_list)
         print current_event
         laika.apply_event(current_event)
-        pass
+        if (laika.is_alive()):
+            print laika
+            
+            if(random.randrange(3) is 0):
+                #Does the reactor need matinence
+                character_list = perform_vote(character_list)
+                pass
+                
+            #Vote:
+            
+            #Choose Activites:
+            
+        else:
+            print "The ship has exploded. Game Over"
+            break
+        
 
 if __name__ == '__main__':
     main()
