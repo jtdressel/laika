@@ -4,10 +4,10 @@ from laikia_core.character import character
 from laikia_core.item import item
 import random
 
+NUMBER_OF_TURNS = 20
 
 def perform_vote(character_list):
     print "Reactor needs maintenance."
-    
     votes = dict()
     for x in character_list:#everyone starts with zero votes
         votes[x] = 0
@@ -65,7 +65,7 @@ def main():
         character_list.append(character_a)
     
     # Game Loop
-    for _ in xrange(20): #currently run for 10 turns
+    for _ in xrange(NUMBER_OF_TURNS):
         current_event = random.choice(event_list)
         print current_event
         laika.apply_event(current_event)
