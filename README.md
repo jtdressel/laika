@@ -1,6 +1,15 @@
 Last Flight of the Laika
 ========================
 
+_Last Flight of the Laika_ is a game where players must keep their ship, the 
+Laika, afloat, while, at the same time, they strive to survive the ordeal. 
+The reactor is malfunctioning, and some players will be voted off the island, 
+and into the reactor to allow survival of the ship. 
+
+Each turn players choose how to spend their time, they can repair parts 
+of the ship, they can learn more about the ship or they can scavenge for useful
+items. Every so often the reactor goes critical, and someone will be voted 
+inside to fix it. 
 
 Gameplay
 ========
