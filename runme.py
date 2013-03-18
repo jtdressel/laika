@@ -1,7 +1,7 @@
-from ship import ship
-from event import event
-from character import character
-from item import item
+from laikia_core.ship import ship
+from laikia_core.event import event
+from laikia_core.character import character
+from laikia_core.item import item
 import random
 
 
