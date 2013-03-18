@@ -1,9 +1,9 @@
 class ship:
     def __init__(self, name, com, water, oxygen):
         self.name = name
-        self.com_system_health = 100.0
-        self.water_system_health = 100.0
-        self.oxygen_garden_health = 100.0
+        self.com_system_health = com
+        self.water_system_health = water
+        self.oxygen_garden_health = oxygen
         
     def apply_event(self, event):
         self.com_system_health = self.com_system_health + event.com_system_health_change
