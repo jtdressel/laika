@@ -9,7 +9,12 @@ class ship:
         self.com_system_health = self.com_system_health + event.com_system_health_change
         self.water_system_health = self.water_system_health + event.water_system_health_change
         self.oxygen_garden_health = self.oxygen_garden_health + event.oxygen_garden_health_change
-        
+
+    def fix_water(self, water_skill):
+        self.water_system_health = self.water_system_health + water_skill
+        if(self.water_system_health > 100):
+            self.water_system_health = 100
+
     def is_alive(self):
         if(self.water_system_health > 0 and self.oxygen_garden_health > 0):
             return True

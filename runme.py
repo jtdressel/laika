@@ -87,4 +87,12 @@ def main():
         
 
 if __name__ == '__main__':
-    main()
+    #main()
+    laika = ship("Laika", 90.0, 90.0, 90.0)
+    character_list = []
+    event_list = []
+    item_list = []
+    print laika
+    character_a = character("bob", 100.0, 2.0, 1.0, .1) #100 health 2 water, 1 oxygen, .1 com
+    laika.fix_water(character_a.water_skill)
+    print laika
