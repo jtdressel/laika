@@ -37,3 +37,6 @@ nosetests.xml
 # Temp Files
 *.swp
 *~
+
+# Packaged Files
+*.zip
