@@ -20,6 +20,10 @@ class ship:
         if(self.com_system_health > 100):
             self.com_system_health = 100
             
+    def fix_oxygen(self, oxygen_skill):
+        self.oxygen_garden_health = self.oxygen_garden_health + oxygen_skill
+        if(self.oxygen_garden_health > 100):
+            self.oxygen_garden_health = 100
 
     def is_alive(self):
         if(self.water_system_health > 0 and self.oxygen_garden_health > 0):
