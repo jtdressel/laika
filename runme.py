@@ -50,8 +50,7 @@ def choose_activity(character_list, ship):
             print "No items found"
             #TODO give item
         elif i == 1:
-            print "No research found"
-            #TODO research
+            x.research()
         elif i == 2:
             ship.fix_water(x.get_water_skill())
         elif i == 3:
@@ -97,7 +96,7 @@ def main():
     for _ in xrange(num_players):
         #TODO add choice of character abilities
         name = raw_input("Name: ")
-        character_a = character(name, 100.0, 2.0, 1.0, .1) #100 health 2 water, 1 oxygen, .1 com
+        character_a = character(name, random.uniform(95,100), random.uniform(2,10), random.uniform(2,10), random.uniform(2,10))
         character_list.append(character_a)
     
     # Game Loop
