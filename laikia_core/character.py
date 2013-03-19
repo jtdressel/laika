@@ -21,7 +21,20 @@ class character:
         #todo factor in individual radiation resistance and items
         self.health = self.health - random.uniform(30, 50)
         self.health = -3
-        
+    
+    def research(self):
+        i = random.randrange(3)
+        improvement = random.uniform(0.01, 3)
+        if i == 0:
+            print "water system repair skill improved by " + str(improvement)
+            self.water_skill = self.water_skill + improvement
+        elif i == 1:
+            print "oxygen garden repair skill improved by " + str(improvement)
+            self.oxygen_skill = self.oxygen_skill + improvement
+        elif i == 2:
+            print "communication system repair skill improved by " + str(improvement)
+            self.com_skill = self.com_skill + improvement
+    
     def get_water_skill(self):
         return self.water_skill
         
