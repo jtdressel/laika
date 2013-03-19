@@ -4,6 +4,7 @@ from laikia_core.character import character
 from laikia_core.item import item
 import random
 
+REACTOR_CHANCE = 4 # 1 in 4 chance
 NUMBER_OF_TURNS = 20
 
 def perform_vote(character_list):
@@ -72,7 +73,7 @@ def main():
         if (laika.is_alive()):
             print laika
             
-            if(random.randrange(3) is 0):
+            if(random.randrange(REACTOR_CHANCE) is 0):
                 #Does the reactor need matinence
                 character_list = perform_vote(character_list)
                 pass
