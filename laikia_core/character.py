@@ -22,6 +22,15 @@ class character:
         self.health = self.health - random.uniform(30, 50)
         self.health = -3
         
+    def get_water_skill(self):
+        return self.water_skill
+        
+    def get_com_skill(self):
+        return self.com_skill
+    
+    def get_oxygen_skill(self):
+        return self.oxygen_skill
+    
     def alive(self):
         if (self.healh > 0):
             return True

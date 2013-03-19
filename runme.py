@@ -34,6 +34,31 @@ def perform_vote(character_list):
         
     return character_list
 
+def choose_activity(character_list, ship):
+    print "Choose Activity"
+    print "0: Scavenge for items"
+    print "1: Research the ship"
+    print "2: Repair the water system"
+    print "3: Repair the oxygen garden"
+    print "4: Repair the communication system"
+            
+    for x in character_list: # do voting
+        print x.name + "'s Turn"
+        i = raw_input("Choice: ")
+        i = int(i)
+        if i == 0:
+            print "No items found"
+            #TODO give item
+        elif i == 1:
+            print "No research found"
+            #TODO research
+        elif i == 2:
+            ship.fix_water(x.get_water_skill())
+        elif i == 3:
+            ship.fix_oxygen(x.get_oxygen_skill())
+        elif i == 4:
+            ship.fix_com(x.get_com_skill())
+            
 def main():
     #Build ship
     laika = ship("Laika", 100.0, 100.0, 100.0)
@@ -76,24 +101,15 @@ def main():
             if(random.randrange(REACTOR_CHANCE) is 0):
                 #Does the reactor need matinence
                 character_list = perform_vote(character_list)
-                pass
-                
-            #Vote:
+            else:
+                choose_activity(character_list, laika)
+                # people get to choose activity
             
             #Choose Activites:
-            
         else:
             print "The ship has exploded. Game Over"
             break
         
 
 if __name__ == '__main__':
-    #main()
-    laika = ship("Laika", 90.0, 90.0, 90.0)
-    character_list = []
-    event_list = []
-    item_list = []
-    print laika
-    character_a = character("bob", 100.0, 2.0, 1.0, .1) #100 health 2 water, 1 oxygen, .1 com
-    laika.fix_water(character_a.water_skill)
-    print laika
+    main()
