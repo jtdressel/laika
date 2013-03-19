@@ -77,6 +77,16 @@ def main():
                             0, \
                             -3.0, \
                             -20.9))
+    event_list.append(event("Smooth Sailing", \
+                            "Nothing bad happens", \
+                            0, \
+                            0, \
+                            0))
+    event_list.append(event("Smooth Sailing", \
+                            "Nothing bad happens", \
+                            0, \
+                            0, \
+                            0))
     
     item_list.append(item("gun", "When used, a gun prevents the owner from being voted into the reactor"))
     
